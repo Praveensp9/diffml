@@ -1,0 +1,85 @@
+M S Ramaiah Institute Of Technology
+(Autonomous Institution Affiliated to VTU)
+Department of Computer Science and Engineering
+
+ 
+
+  8th Semester 
+    Synopsis for the Project 
+
+   Project Title
+			         Diff set Based Automation
+
+	  	
+  							Submitted by:
+ 							Name: Praveengouda S Patil       
+USN:  1MS12CS076                        
+
+
+  							Guide Name: Chandrika P 
+ 							Date: 6/02/2016
+
+
+
+
+INTRODUCTION
+
+Research studies show that software maintenance activity takes two thirds of the cost of software production. One of the expensive tasks, after maintenance is to establish confidence that changes made in the system are correct and has not developed any side effects in the already checked software. This assurance is achieved by performing regression testing. Regression testing is the re execution of test cases that have already been executed. In regression testing number of regression tests increases and it is impractical and inefficient to re-execute all test cases after every change made to software. Most of the times running an entire suite is not possible as it takes significant amount of time to run all tests in a test suite. Software testing and retesting occurs continuously during the software development life cycle to detect errors as early as possible, so various techniques have been proposed for minimizing test suite. Test Suite minimization techniques lower costs by reducing a test suite to a minimal subset that maintains equivalent coverage of original set with respect to particular test adequacy criterion
+
+Regression testing calls for the execution of all the test cases tested before a change is made in the software. It takes a lot of time and resources and hence a technique is needed to prioritize the test cases so that only important test cases are re-executed thus saving the time and still not compromising with the quality of the software. Test case prioritization involves scheduling test cases so that performance of regression testing can be improved. To re execute all test cases after every modification in the code is an inefficient process. A technique is to execute the modified lines of code with minimum number of test cases. The proposed test case prioritization technique organizes the test case in a test suite in an ordering such that fewer lines of code need to be re executed thus faster code coverage is attained which would lead to early detection of faults.
+
+
+
+
+
+
+MOTIVATION/NEED OF THE PROJECT
+
+In general, regression testing involves running hundreds of test cases on each and every module of the code to test integrity and robustness after updation of the code. In large software systems where there are millions of lines of code (LOC), carrying out this task is tedious and is a waste of resources like time, effort and money. Hence the need for a more effective system that would determine the appropriate modules that are to be tested. 
+	Not all modules need to be tested if an updation occurs. Only those modules that are dependent need to be taken into consideration for the testing. This will save both time and efforts required for testing.
+
+
+
+PROBLEM DEFINITION / STATEMENT:
+
+To construct an effective mechanism to improve regression testing such that only the required   modules are tested after updating one or more lines of the code.
+Regression Test Selection algorithm based on code coverage considers executing test cases which covers modified lines of code. Let P be the previous source code and M be the modified version of T. TH be a set of code coverage based test cases to test P. When P is modified to M the objective is to find T', which is a subset of TH that covers all modified lines of code at the earliest. If two or more test cases, have same number of modified lines and their values also matches then consider test case that has few lines of codes other than modified lines.
+
+
+OBJECTIVES 
+
+•	To reduce amounts of time as well as effort spent on testing, which often accounts for almost half of the software maintenance costs.
+•	It is also important to note that hundreds of man-hours are spent by test engineers to oversee the regression testing process; that is to set up test runs, monitor test execution, analyze results, and maintain testing resources.So other objective is to reduce this man-hours spent by automation.
+
+
+
+
+METHODOLOGY:
+
+Some regression testing techniques are based on program specification and others select test cases based on information about code of the program and modified version. The proposed algorithm is based on code coverage techniques of modified version. Program components that have been modified or affected by modifications are provided along with the test suite based on code coverage, and the algorithm select tests in T that exercise those components and the minimization techniques work like coverage techniques, which select minimal sets of tests through modified or affected program components. There are four methodologies that are available for regression testing. These methods are 
+
+
+1. Retest all
+2. Regression Test Selection
+3. Test Suite Reduction
+4. Test Case Prioritization
+
+
+
+
+1. Retest -all.
+
+This technique discards the test cases which are not applicable to the modified version of program and test all the remaining set of test cases used for testing of modified program.
+
+2. Regression test selection.
+
+This uses information about program, modified program and test cases are selected on some basis. Retest all technique is expensive as it takes time and effort as all test cases are considered for regression testing.
+
+3. Test suite Reduction.
+
+This technique uses information about program and test suite to remove the test cases, which have become redundant with time, as new functionality is added. It is different from Regression test selection as former does not permanently remove test cases but selects those that are required. Advantage of this technique is that it reduces cost of validating, executing, managing test suites over future releases of software, but the downside of this is that it might reduce the fault detection capability with the reduction of test suite size.
+
+
+4. Test Case Prioritization.
+
+In this technique each test cases is prioritized according to some criterion and higher priority test cases are executed first. Its advantage as compared to Test suite Reduction is that it doesn't discard or permanently remove the test cases from test suite. Present approach considers test selection and test cases are prioritizing based on early coverage of the code.
