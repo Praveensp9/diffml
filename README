@@ -1,0 +1,5 @@
+The Project Is all About Diffset based Automation.The follwing explanation gives a overview of the project.
+
+To construct an effective mechanism to improve regression testing such that only the required modules are tested after updating one or more lines of the code.
+ Regression Test Selection algorithm based on code coverage considers executing test cases which covers modified lines of code.
+ Let P be the previous source code and M be the modified version of T. TH be a set of code coverage based test cases to test P. When P is modified to M the objective is to find T', which is a subset of TH that covers all modified lines of code at the earliest. If two or more test cases, have same number of modified lines and their values also matches then consider test case that has few lines of codes other than modified lines.
